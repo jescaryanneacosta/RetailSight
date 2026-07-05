@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+body {
+    background-color: #ffffff;
+    color: #31333F;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #F0F2F6;
+    padding: 2.5rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+    border-right: 1px solid #e6e9ef;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #31333F;
+}
+
+.main-content {
+    margin-left: 300px;
+    flex-grow: 1;
+    padding: 3.5rem 5rem;
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #31333F;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555867;
+    margin-bottom: 2.5rem;
+}
+
+.metric-card {
+    background-color: #F8F9FB;
+    border: 1px solid #E6E9EF;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    min-width: 240px;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #6D707D;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #31333F;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #ffffff;
+    border: 1px dashed #A3A8B4;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button {
+    background-color: #ffffff;
+    color: #31333F;
+    border: 1px solid #D6D8DF;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    border-color: #FF4B4B;
+    color: #FF4B4B;
+}
+
+table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+table.data th {
+    background-color: #F0F2F6;
+    color: #31333F;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #E6E9EF;
+}
+
+table.data td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #E6E9EF;
+    color: #31333F;
+}
+
+table.data tr:hover {
+    background-color: #F8F9FB;
+}

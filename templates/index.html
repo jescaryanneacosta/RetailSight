@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RetailSight Analytics</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h3>Configuration</h3>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="forecast_days"
+            >Forecast Horizon:
+            <span id="slider_val" style="font-weight: 700; color: #ff4b4b"
+              >30 </span
+            >Days
+          </label>
+          <input
+            type="range"
+            id="forecast_days"
+            name="forecast_days"
+            min="7"
+            max="90"
+            value="30"
+            oninput="
+              document.getElementById('slider_val').innerText = this.value
+            "
+            style="width: 100%; cursor: pointer; margin-top: 0.5rem"
+          />
+        </div>
+        <div class="form-group">
+          <label for="file">Upload Historical Sales (CSV)</label>
+          <input type="file" id="file" name="file" accept=".csv" required />
+        </div>
+        <button type="submit" style="width: 100%">Generate Forecast</button>
+      </form>
+    </div>
+
+    <div class="main-content">
+      <h1>RetailSight: Predictive Inventory Analytics</h1>
+      <p class="description">
+        Upload your historical sales data to generate an inventory restocking
+        forecast.
+      </p>
+
+      <div class="metric-card" style="border-style: dashed">
+        <div class="metric-label">System Status</div>
+        <div
+          class="metric-value"
+          style="font-size: 1.2rem; font-weight: 400; margin-top: 0.5rem"
+        >
+          Awaiting CSV file upload from the configuration menu.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
