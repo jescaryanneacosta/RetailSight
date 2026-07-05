@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import plotly.graph_objects as go
-import base64 # 1. Import the base64 library
+import base64
 from src.predictor import generate_forecast
 
 app = Flask(__name__)
@@ -48,12 +48,10 @@ def index():
             chart_html = fig.to_html(full_html=False, include_plotlyjs='cdn')
             total_items_needed = int(forecast_df['Predicted_Demand'].sum())
             
-            # 2. Convert dataframe to CSV string and encode it for HTML
             csv_data = forecast_df.to_csv(index=False)
             b64 = base64.b64encode(csv_data.encode()).decode()
             csv_href = f"data:text/csv;base64,{b64}"
             
-            # 3. Pass the csv_href to the template
             return render_template(
                 'results.html', 
                 tables=forecast_df.to_html(classes='data', index=False), 
